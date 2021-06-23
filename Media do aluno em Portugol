@@ -1,0 +1,38 @@
+README.md
+Algoritmo "MediacomSE"
+// Disciplina   : [Algoritmo e Lógica de Programação I]
+// Descrição   : Calcular e informar a media e informar a situação do aluno(função)
+// Autor(a)    : Ketlyn Athan
+// Data atual  : 23/06/2021
+Var
+
+   nome: caractere
+   nota, media: vetor[0..5] de real
+   i: inteiro
+   soma: real
+
+
+Inicio
+   escreva("Informe nome do aluno: ")
+   leia(nome)
+   para i de 0 ate 4 faca
+      escreva("Informe nota", (i+1), "-nota-->" )
+      leia(nota[i])
+      soma <- soma + nota[i]
+   fimpara
+
+   media[i]<- soma/5
+   escreval("A media é: ", media[i])
+   se (media[i] >= 7) e (media[i] <= 10) entao
+      escreval("O aluno(a): ", nome, "---> está APROVADO!!!")
+   senao
+      se (media[i] <= 6.9) e (media[i] >= 5) entao
+         escreval("O Aluno: ", nome, "---> está em RECUPERAÇÃO")
+      senao
+         se (media[i] <= 4.9) e (media[i] >=0) entao
+            escreval("O aluno : ", nome, "---> está REPROVADO")
+         fimse
+      fimse
+   fimse
+
+Fimalgoritmo
